@@ -1,1 +1,1 @@
-# cse455-bird-classification
+# cse455-rice-classification
