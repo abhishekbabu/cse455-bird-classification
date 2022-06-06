@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Rice Classification</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="shortcut icon" href="imgs/rice_header.jpg" type="image/jpg">  
+</head>
+
+<body>
+  <nav>
+      <ul>
+      <li><a href="https://github.com/abhishekbabu/cse455-rice-classification">Repository</a></li>
+          <li><a href="https://github.com/abhishekbabu/cse455-rice-classification/code">Code</a></li>
+          <li><a href="https://www.kaggle.com/datasets/muratkokludataset/rice-image-dataset">Dataset</a></li>
+      <li><a href="">Video</a></li>
+      </ul>
+  </nav>
+
+  <div class="container">
+    <div class="blurb">
+      <h1>Classification of Rice Varieties with Neural Networks</h1>
+        
+        <h2>Project Description</h2>
+        <p>
+          Rice, which is among the most widely produced grain products worldwide, has many genetic varieties.
+          These varieties are separated from each other due to some of their features. These are usually features 
+          such as texture, shape, and color. With these features that distinguish rice varieties, it is possible 
+          to classify and evaluate the quality of seeds. Using the 
+          <a href="https://www.kaggle.com/c/vinbigdata-chest-xray-abnormalities-detection">Rice Image Dataset</a> dataset from Kaggle
+          we aim to explore various neural network models to classify five different rice varieties: 
+          Arborio, Basmati, Ipsala, Jasmine and Karacadag, which are different varieties of rice often grown in Turkey.
+          In particular, we will be applying the transfer learning of three different pre-trained models from the Pytorch library: 
+          ResNet18, AlexNet, and SqueezeNet, to the dataset. We will also explore three different optimizers applied to each of the
+          aforementioned classifier models. 
+        </p>
+
+        <h2>Datasets</h2>
+        <p>
+          We found our dataset from this kaggle image dataset: <a href="https://www.kaggle.com/datasets/muratkokludataset/rice-image-dataset">
+          Rice Image Dataset</a>. This dataset provided a total of 75 thousand images, including 15 thousand images from each rice variety. 
+          The dataset also has 12 morphological, 4 shape and 90 color features. To get the data for classification, we first resized, crop at center 
+          and normalize all images. We then split the newly cropped images into training, validation, and testing.><br><br>
+
+          To start, we get images like this: <br><br>
+        </p>
+
+        <h2>Preprocessing the data for classification</h2>
+        <p>
+          Our initial dataset contains images of different rice varieties separated into folders. The training set is
+          pre-labeled. To create our dataset for classification, we resized the images to 256x256 pixels, then center 
+          crop the images size down to 224x224 pixels, and normalize all the images. We then split the dataset into training, 
+          validation, and test sets in a 80:10:10 split. The code to parse the data as well as splitting
+          the data can be found in the code folder of the github repository.
+        </p>
+
+        <h2>Models and Parameters</h2>
+        <p>
+          We experimented with utilizing some of the provided models that were pre-trained on the ImageNet dataset
+          for our specific classification problem. These models are loaded from the torchvision models subpackage.
+          We explored these three different pre-trained models:
+
+          <h3>AlexNet</h3>
+          Alexnet is a landmark model based on the CNN architecture. 
+          AlexNet won the Imagenet large-scale visual recognition challenge in 2012. 
+          The model was proposed in 2012 in the research paper named 
+          <a href="https://dl.acm.org/doi/10.1145/3065386">Imagenet Classification with Deep Convolution Neural Network</a> 
+          by Alex Krizhevsky and his colleagues.
+          
+          <h3>ResNet18</h3>
+          ResNet is another landmark CNN model that won the ImageNet 2015 competition and has become the most cited neural network of the 21st century.
+          ResNet has many variations based on its layer depth, of which ResNet18 is 18 layers deep. ResNet was introduced in 2015 by researchers at 
+          Microsoft Research through a paper called <a href="https://dl.acm.org/doi/10.1145/3065386">Deep Residual Learning for Image Recognition</a>.
+          
+          <h3>SqueezeNet</h3>
+          SqueezeNet is a smaller CNN model that was designed as a more compact replacement for AlexNet. 
+          It has almost 50x fewer parameters than AlexNet, yet it performs 3x faster, and achieves comparable accuracy to AlexNet on ImageNet.
+          SqueezeNet was developed by researchers at DeepScale, University of California, Berkeley, and 
+          Stanford University and proposed in a paper named <a href="https://arxiv.org/abs/1602.07360">SqueezeNet: 
+          AlexNet-level accuracy with 50x fewer parameters and &lt 0.5MB model size</a>. 
+
+          <p>
+          We also explored the usage of three different optimizers: Stochastic Gradient Descent (SGD), Adadelta, and RMSprop, 
+          which are used in training for each models, for a total of 9 different combinations.
+          </p>
+
+          <h3>Parameters</h3>
+
+      <h2>Results</h2>
+      <p>
+        Below is a table of the results of the predictions performed by each model.<br><br>
+
+        <img src="/imgs/results-table.png" alt="Table of results for models" width="729" height="697">
+      </p>
+
+      <h2>Discussion</h2>
+    </div><!-- /.blurb -->
+  </div><!-- /.container -->
+
+<footer>
+</footer>
+</body>
+</html>
