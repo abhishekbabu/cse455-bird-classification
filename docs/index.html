@@ -52,6 +52,7 @@
           <li><a href="#experiments">Experiments</a></li>
           <li><a href="#results">Results</a></li>
           <li><a href="#discussion">Discussion</a></li>
+          <li><a href="#references">References</a></li>
           <li><a href="https://github.com/abhishekbabu/cse455-rice-classification" target="_blank">Code</a></li>
           <li><a href="https://youtu.be/DBiEtzIXmxc" target="_blank">Video</a></li>
         </ul>
@@ -95,7 +96,7 @@
               These varieties are separated from each other due to some of their features such a texture, shape, color. Using these visual features, it is possible to classify and evaluate the quality of rice grains.
 
               Using the <a href="https://www.kaggle.com/datasets/muratkokludataset/rice-image-dataset" target="_blank">Rice Image Dataset</a> from Kaggle, we aim to explore various transfer learning approaches with
-              neural network models to see how they generalize to classifying rice varieties. The specific neural network models that we apply transfer learning (suing their PyTorch implementations) to are:
+              neural network models to see how they generalize to classifying rice varieties. The specific neural network models that we apply transfer learning (using their PyTorch implementations) to are:
             </p>
             <ul>
               <li><i class="bi bi-check-circle"></i> <a href="https://arxiv.org/abs/1404.5997" target="_blank">AlexNet</a> (a classic model)</li>
@@ -316,12 +317,33 @@
           <div class="col-lg-12 content">
             <h2>Discussion</h2>
             <ul>
-              <li><i class="bi bi-check-circle"></i> Across the board, AlexNet is the best performing model and Adadelta is the best performing optimizer.</li>
-              <li><i class="bi bi-check-circle"></i> SqueezeNet performs better than ResNet18 with SGD and Adadelta, but not with RMSprop.</li>
-              <li><i class="bi bi-check-circle"></i> Perhaps the learning rate decay of RMSprop is too aggressive</li>
-              <li><i class="bi bi-check-circle"></i> AlexNet has 61M parameters, ResNet18 has 11M parameters and SqueezeNet has 1M parameters.</li>
-              <li><i class="bi bi-check-circle"></i> SqueezeNet with Adadelta and RMSprop loss and accuracy curves are not smooth.</li>
-              <li><i class="bi bi-check-circle"></i> Perhaps lower number of parameters contributes to less stable learning when combined with learning rate decay.</li>
+              <li><i class="bi bi-check-circle"></i>Across the board, AlexNet is the best performing model and Adadelta is the best performing optimizer.</li>
+              <li><i class="bi bi-check-circle"></i>SqueezeNet performs better than ResNet18 with SGD and Adadelta, but not with RMSprop.</li>
+              <li><i class="bi bi-check-circle"></i>Perhaps the learning rate decay of RMSprop is too aggressive</li>
+              <li><i class="bi bi-check-circle"></i>AlexNet has 61M parameters, ResNet18 has 11M parameters and SqueezeNet has 1M parameters.</li>
+              <li><i class="bi bi-check-circle"></i>SqueezeNet with Adadelta and RMSprop loss and accuracy curves are not smooth.</li>
+              <li><i class="bi bi-check-circle"></i>Perhaps lower number of parameters contributes to less stable learning when combined with learning rate decay.</li>
+            </ul>
+            
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="references" class="about">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-12 content">
+            <h2>References</h2>
+            <ul>
+              <li>He, K., Zhang, X., Ren, S., & Sun, J. (2016). Deep residual learning for image recognition. In Proceedings of the IEEE conference on computer vision and pattern recognition (pp. 770-778).</li>
+              <li>Iandola, F. N., Han, S., Moskewicz, M. W., Ashraf, K., Dally, W. J., & Keutzer, K. (2016). SqueezeNet: AlexNet-level accuracy with 50x fewer parameters and< 0.5 MB model size. arXiv preprint arXiv:1602.07360.</li>
+              <li>Krizhevsky, A. (2014). One weird trick for parallelizing convolutional neural networks. arXiv preprint arXiv:1404.5997.</li>
+              <li>Zeiler, M. D. (2012). Adadelta: an adaptive learning rate method. arXiv preprint arXiv:1212.5701.</li>
+              <li><a href="https://ruder.io/optimizing-gradient-descent/" target="_blank">https://ruder.io/optimizing-gradient-descent/</a></li>
+              <li><a href="https://www.cs.toronto.edu/~tijmen/csc321/slides/lecture_slides_lec6.pdf" target="_blank">https://www.cs.toronto.edu/~tijmen/csc321/slides/lecture_slides_lec6.pdf</a></li>
             </ul>
             
           </div>
