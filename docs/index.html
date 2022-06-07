@@ -142,8 +142,8 @@
             <h3>Preprocessing</h3>
             <p>
               The data was pre-labeled appropriately, and so, we did not have to manually label or re-label the data. When loading in the images, we resize them to 256x256x3 and then take a center crop of the image of size 224x224x3, which is the
-              input size for all three neural network models being trained. Then, we normalize the images. We then split the data into training, validation and testing sets using an 80:10:10 split (60000 training images, 10000 validation images,
-              and 10000 testing images). The code for data preprocessing (and the rest of the code for the experiments) can be found in our <a href="https://github.com/abhishekbabu/cse455-rice-classification" target="_blank">GitHub repository</a>.
+              input size for all three neural network models being trained. Then, we normalize the images. We then split the data into training, validation and testing sets using an 80:10:10 split (60000 training images, 7500 validation images,
+              and 7500 testing images). The code for data preprocessing (and the rest of the code for the experiments) can be found in our <a href="https://github.com/abhishekbabu/cse455-rice-classification" target="_blank">GitHub repository</a>.
             </p>
 
           </div>
@@ -216,7 +216,7 @@
             <h4><a href="https://pytorch.org/docs/stable/generated/torch.optim.SGD.html" target="_blank">SGD</a></h4>
 
             <p>
-              In contrast to regular gradient descent, mini-batch stochastic gradient descent (SGD) performs paramater updates for each batch of training examples rather than the entire training set. This reduces the variance of the parameter updates and generally leads to the best performance out of
+              In contrast to regular gradient descent, mini-batch stochastic gradient descent (SGD) performs parameter updates for each batch of training examples rather than the entire training set. This reduces the variance of the parameter updates and generally leads to the best performance out of
               gradient descent variants.
             </p>
 
@@ -224,7 +224,7 @@
 
             <p>
               Adadelta is an extension of Adagrad. Adagrad tries to lower the learning rate for parameters associated with frequently occurring features and larger updates for infrequent features. Adadelta tries to reduce the 
-              monotonically decreasing learning rate of Adagrad by restrciting the window of accumulated past gradients to a fixed size.
+              monotonically decreasing learning rate of Adagrad by restricting the window of accumulated past gradients to a fixed size.
             </p>
 
             <h4><a href="https://pytorch.org/docs/stable/generated/torch.optim.RMSprop.html" target="_blank">RMSprop</a></h4>
@@ -319,7 +319,7 @@
             <ul>
               <li><i class="bi bi-check-circle"></i>Across the board, AlexNet is the best performing model and Adadelta is the best performing optimizer.</li>
               <li><i class="bi bi-check-circle"></i>SqueezeNet performs better than ResNet18 with SGD and Adadelta, but not with RMSprop.</li>
-              <li><i class="bi bi-check-circle"></i>Perhaps the learning rate decay of RMSprop is too aggressive</li>
+              <li><i class="bi bi-check-circle"></i>Perhaps the learning rate decay of RMSprop is too aggressive.</li>
               <li><i class="bi bi-check-circle"></i>AlexNet has 61M parameters, ResNet18 has 11M parameters and SqueezeNet has 1M parameters.</li>
               <li><i class="bi bi-check-circle"></i>SqueezeNet with Adadelta and RMSprop loss and accuracy curves are not smooth.</li>
               <li><i class="bi bi-check-circle"></i>Perhaps lower number of parameters contributes to less stable learning when combined with learning rate decay.</li>
