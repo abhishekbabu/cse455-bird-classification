@@ -53,6 +53,7 @@
           <li><a href="#dataset">Dataset</a></li>
           <li><a href="#experiments">Experiments</a></li>
           <li><a href="#results">Results</a></li>
+          <li><a href="#discussion">Discussion</a></li>
           <li><a href="https://github.com/abhishekbabu/cse455-rice-classification" target="_blank">Code</a></li>
           <li><a href="#">Video</a></li>
         </ul>
@@ -131,9 +132,11 @@
             <br/>
 
             <h3>Preprocessing</h3>
-            The data was pre-labeled appropriately, and so, we did not have to manually label or re-label the data. When loading in the images, we resize them to 256x256x3 and then take a center crop of the image of size 224x224x3, which is the
-            input size for all three neural network models being trained. Then, we normalize the images. We then split the data into training, validation and testing sets using an 80:10:10 split (60000 training images, 10000 validation images,
-            and 10000 testing images). The code for data preprocessing (and the rest of the code for the experiments) can be found in our <a href="https://github.com/abhishekbabu/cse455-rice-classification" target="_blank">GitHub repository</a>.
+            <p>
+              The data was pre-labeled appropriately, and so, we did not have to manually label or re-label the data. When loading in the images, we resize them to 256x256x3 and then take a center crop of the image of size 224x224x3, which is the
+              input size for all three neural network models being trained. Then, we normalize the images. We then split the data into training, validation and testing sets using an 80:10:10 split (60000 training images, 10000 validation images,
+              and 10000 testing images). The code for data preprocessing (and the rest of the code for the experiments) can be found in our <a href="https://github.com/abhishekbabu/cse455-rice-classification" target="_blank">GitHub repository</a>.
+            </p>
 
           </div>
         </div>
@@ -293,6 +296,19 @@
             <p style="text-align:center;"><img src="assets/img/SqueezeNet Adadelta Accuracy.png"></p>
             <p style="text-align:center;"><img src="assets/img/SqueezeNet RMSprop Accuracy.png"></p>
             
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="discussion" class="about">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-12 content">
+            <h2>Discussion</h2>
+
           </div>
         </div>
 
